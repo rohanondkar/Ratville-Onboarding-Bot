@@ -1,0 +1,4 @@
+# Ratville DnD onboarding bot — assigns Player after all Welcome checkpoints.
+
+discord.py>=2.3.0
+python-dotenv>=1.0.0

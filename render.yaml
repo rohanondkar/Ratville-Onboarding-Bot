@@ -1,0 +1,21 @@
+# Render background worker — https://render.com
+# Dashboard → New → Background Worker → connect repo or use manual deploy
+
+services:
+  - type: worker
+    name: ratville-onboarding-bot
+    runtime: docker
+    plan: free
+    envVars:
+      - key: DISCORD_BOT_TOKEN
+        sync: false
+      - key: GUILD_ID
+        sync: false
+      - key: PLAYER_ROLE_ID
+        sync: false
+      - key: ONBOARDING_MESSAGE_IDS
+        sync: false
+      - key: ONBOARDING_EMOJI
+        value: "✅"
+      - key: REVOKE_ON_UNREACT
+        value: "false"
